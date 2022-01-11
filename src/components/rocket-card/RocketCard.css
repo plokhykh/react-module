@@ -1,0 +1,8 @@
+.rocket-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border: 1px solid gray;
+    margin: 8px 2px;
+}
