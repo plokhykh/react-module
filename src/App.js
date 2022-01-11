@@ -1,8 +1,10 @@
 import './App.css';
+import RocketList from "./components/rockets-list/RocketList";
 
 function App() {
   return (
-    <div >
+    <div>
+      <RocketList/>
     </div>
   );
 }
