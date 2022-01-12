@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import RocketCard from "../rocket-card/RocketCard";
 
+import RocketCard from "../rocket-card/RocketCard";
 import './RocketsList.css';
 
 
@@ -12,7 +12,8 @@ function RocketList() {
         fetch('https://api.spacexdata.com/v3/launches/')
             .then(data => data.json())
             .then(response => {
-                setRockets(response.filter(item => +item.launch_year !== 2020));
+                response = response.filter(item => item.launch_year !== '2020');
+                setRockets(response);
             })
             .catch(err => console.log(err))
     }, [])
