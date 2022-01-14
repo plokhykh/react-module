@@ -2,7 +2,7 @@ import {useState} from "react";
 
 import {postsService} from "./services/posts.service";
 import Users from "./components/users/Users";
-import PostsList from "./components/PostsList";
+import Posts from "./components/Posts";
 import './App.css';
 
 
@@ -17,7 +17,7 @@ function App() {
     return (
         <div>
             <Users getUserPosts={getUserPosts}/>
-            {posts && posts.map(post => <PostsList title={post.title} body={post.body}/>)}
+            <Posts posts={posts}/>
         </div>
     );
 }
