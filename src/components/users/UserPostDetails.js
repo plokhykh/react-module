@@ -6,6 +6,7 @@ export const UserPostDetails = ({ post: { title, body } }) => {
         <div>
             <h5>{title}</h5>
             <p>{body}</p>
+            <hr/>
         </div>
     );
 };

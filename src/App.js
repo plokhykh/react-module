@@ -2,10 +2,10 @@ import {Route, Routes, Navigate} from "react-router-dom";
 
 import {Layout} from "./components/Layout";
 import {UsersPage, PostsPages} from "./pages";
-import {UserDetails} from "./components/users/UserDetails";
-import {UserPosts} from "./components/users/UserPosts";
-import {PostDetails} from "./components/posts/PostDetails";
-import {PostComments} from "./components/posts/PostComments";
+import {UserAlbums, UserDetails, UserPosts} from "./components/users"
+import {PostDetails, PostComments} from "./components/posts"
+import {AlbumsDetails} from "./components/albums/AlbumsDetails";
+
 
 function App() {
     return (
@@ -15,6 +15,9 @@ function App() {
                 <Route path={''} element={<Navigate to={'users'}/>}/>
 
                 <Route path={"users"} element={<UsersPage/>}>
+                    <Route path={":id/albums"} element={<UserAlbums/>}>
+                        <Route path={":albumId/photos"} element={<AlbumsDetails/>}/>
+                    </Route>
                     <Route path={":id"} element={<UserDetails/>}>
                         <Route path={"posts"} element={<UserPosts/>}/>
                     </Route>

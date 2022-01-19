@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 
 export const UsersList = ({ user }) => {
@@ -9,7 +9,7 @@ export const UsersList = ({ user }) => {
     return (
         <div>
             <NavLink to={id.toString()} state={user}>
-                {id}. {name}
+                {id}. {name} <Link to={`${id.toString()}/albums`}><button>get albums</button></Link>
             </NavLink>
         </div>
     );

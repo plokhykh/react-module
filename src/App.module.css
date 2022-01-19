@@ -5,7 +5,7 @@
 }
 
 .item {
-    max-width: 45%;
+    width: 45%;
 }
 
 .list{
@@ -29,3 +29,5 @@ button:hover{
     cursor: pointer;
     color: lemonchiffon;
 }
+
+

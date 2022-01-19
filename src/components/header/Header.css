@@ -13,7 +13,7 @@
     cursor: pointer;
 }
 
-.header-link + .active {
+.active {
     text-decoration: underline;
-    color: lemonchiffon;
+    color: palegoldenrod;
 }
