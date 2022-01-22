@@ -1,0 +1,16 @@
+button {
+    border: 3px solid #4c797a;
+    border-radius: 15px;
+    background: cadetblue;
+    color: snow;
+    min-width: 150px;
+    font-size: 30px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 20px 3px rgba(166, 168, 166, .3)
+}
+
+button:hover {
+    cursor: pointer;
+    color: palegoldenrod;
+}
