@@ -1,0 +1,24 @@
+.character-card {
+    background-color: var(--main-bg-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--secon-text-color);
+    letter-spacing: 2px;
+    max-width: 320px;
+    height: 560px;
+
+}
+
+.character-card > img{
+    height: 300px;
+}
+
+.character-card > h3 {
+    font-size: 30px;
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+.character-card > p {
+    margin-bottom: 10px;
+}

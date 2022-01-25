@@ -1,0 +1,27 @@
+.episode-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.episode-title {
+    color: var(--main-text-color);
+    text-shadow: 3px 0 2px var(--secon-text-color),
+    0 3px 2px var(--secon-text-color),
+    -3px 0 2px var(--secon-text-color),
+    0 -3px 2px var(--secon-text-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--main-bg-color);
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+.episode-characters {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 30px;
+}

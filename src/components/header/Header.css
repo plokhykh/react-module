@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 60px;
+    background-color: var(--main-bg-color);
+}
+
+.header img {
+    width: 100px;
+}
+
+.header-links{
+    display: flex;
+    column-gap: 60px;
+}
+
+.header-links > a{
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-shadow: 3px 0 2px var(--secon-text-color),
+    0 3px 2px var(--secon-text-color),
+    -3px 0 2px var(--secon-text-color),
+    0 -3px 2px var(--secon-text-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--main-bg-color);
+}
+
+.header > a :hover {
+    cursor: pointer;
+}

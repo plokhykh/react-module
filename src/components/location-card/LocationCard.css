@@ -1,0 +1,30 @@
+.location-card {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 10px;
+}
+
+.location-card-title {
+    color: var(--main-text-color);
+    text-shadow: 3px 0 2px var(--secon-text-color),
+    0 3px 2px var(--secon-text-color),
+    -3px 0 2px var(--secon-text-color),
+    0 -3px 2px var(--secon-text-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--main-bg-color);
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+.location-card-residents {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 10px 30px;
+}
+
+hr {
+    border-top: 3px solid var(--secon-text-color);
+    margin-top: 10px;
+}

@@ -1,0 +1,14 @@
+.episodes-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 20px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.episodes-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
