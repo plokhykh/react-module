@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+:root {
+    --main-bg-color: #1e2048;
+    --main-text-color: #05b3d1;
+    --secon-text-color: #9ad489;
+}
+
+*{
+    font-family: 'Schoolbell', cursive;
+    margin: 0;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
