@@ -1,0 +1,14 @@
+.header{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.header > a{
+    text-decoration: none;
+    color: snow;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,14 @@
+.car-form {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+input {
+    margin: 3px;
+}
+
+.error{
+    color: darkred;
+    font-size: 15px;
+}
