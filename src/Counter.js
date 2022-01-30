@@ -47,14 +47,14 @@ export const Counter = () => {
                 <h3> Second counter: {state.secondCounter}</h3>
                 <button onClick={() => dispatch({ type: 'inc2' })}>INC</button>
                 <button onClick={() => dispatch({ type: 'dec2' })}>DEC</button>
-                <button onClick={() => dispatch({ type: 'reset2', payload: 2 })}>RESET</button>
+                <button onClick={() => dispatch({ type: 'reset2', payload: 0 })}>RESET</button>
             </div>
 
             <div>
                 <h3> Third counter: {state.thirdCounter}</h3>
                 <button onClick={() => dispatch({ type: 'inc3' })}>INC</button>
                 <button onClick={() => dispatch({ type: 'dec3' })}>DEC</button>
-                <button onClick={() => dispatch({ type: 'reset3', payload: 3 })}>RESET</button>
+                <button onClick={() => dispatch({ type: 'reset3', payload: 0 })}>RESET</button>
             </div>
         </div>
     );
