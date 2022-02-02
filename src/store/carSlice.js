@@ -35,13 +35,8 @@ const carsSlice = createSlice({
     },
     reducers: {
         updateCar: (state, action) => {
-            let index = '';
-          state.cars.forEach((item, ind) =>{
-                    if(item.id === +action.payload.data.id){
-                        index = ind;
-                    }
-                })
-            state.cars.splice(index, 1, action.payload.data);
+           const woOneCar = state.cars.filter(car => car.id !== action.payload.data.id)
+            state.cars = [...woOneCar, action.payload.data]
         }
 
     },
