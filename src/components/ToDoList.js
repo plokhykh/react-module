@@ -1,15 +1,17 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 import {removeTask, changeStateTask} from "../redux/actions/toDoListAction";
 import './ToDoList.css';
 
 
-const ToDoList = (props) => {
-    const { toDoList, removeTask, changeStateTask } = props;
+export const ToDoList = () => {
+
+    const {toDoList} = useSelector(store => store);
+    const dispatch = useDispatch();
 
     const handleOnChange = (id) => {
-        changeStateTask(id)
+        dispatch(changeStateTask(id))
     };
 
     return (
@@ -24,7 +26,7 @@ const ToDoList = (props) => {
 
                     {item.body}
 
-                    <button onClick={() => removeTask(item.id)}>
+                    <button onClick={() => dispatch(removeTask(item.id))}>
                         delete
                     </button>
 
@@ -35,15 +37,3 @@ const ToDoList = (props) => {
 };
 
 
-const mapStateToProps = (store) => {
-    return {
-        toDoList: store.toDoList
-    }
-}
-
-const mapDispatchToProps = ({
-    removeTask,
-    changeStateTask
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);

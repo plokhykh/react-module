@@ -1,26 +1,26 @@
 import {useState} from "react";
-import {connect} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import uniqid from 'uniqid';
 
-import ToDoList from "./components/ToDoList";
+import {ToDoList} from "./components/ToDoList";
 import {addTask} from "./redux/actions/toDoListAction"
 import './App.css';
 
 
-function App(props) {
-    const { countAllTask, countCompletedTask, addTask } = props;
-
+function App() {
     const [inputData, setInputData] = useState("");
 
-    const onSaveClick = () => {
+    const {countAllTask, countCompletedTask} = useSelector(store=> store);
+    const dispatch = useDispatch();
 
+    const onSaveClick = () => {
         const toDo = {
             id: uniqid(),
             body: inputData,
             isCompleted: false
         }
 
-        addTask(toDo)
+        dispatch(addTask(toDo))
         setInputData("");
     }
 
@@ -43,15 +43,5 @@ function App(props) {
 }
 
 
-const mapStateToProps = (store) => {
-    return {
-        countAllTask: store.countAllTask,
-        countCompletedTask: store.countCompletedTask
-    };
-};
 
-const mapDispatchToProps = ({
-    addTask
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
